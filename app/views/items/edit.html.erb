@@ -1,9 +1,10 @@
-<h2 style="color: #B00100; margin: 0 auto">edit item</h2> <br/>
+<h2 style="color: #B00100; margin: 0 auto">edit <%= @item.name %></h2> <br/>
 
-<%= form_tag edit_item_path, method: :get do %>
-  <%= label_tag :name%>
-  <%= text_field_tag :name %>
+
+<%= form_tag item_path(@item), method: :put do %>
+  <%= label_tag :name %>
+  <%= text_field_tag :name, @item.name %>
   <%= label_tag :price %>
-  <%= text_field_tag :price %>
-  <%= submit_tag "Save", class: "btn btn-large btn-primary" %>
+  <%= text_field_tag :price, @item.price %>
+  <%= submit_tag "Update", class: "btn btn-large btn-primary" %>
 <% end %>
