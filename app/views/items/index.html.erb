@@ -21,6 +21,6 @@
   <% end %>
 </table>
 <br/>
-<%= button_to 'new item', new_item_path %>
-<br/>
-<%= link_to 'only expensive', expensive_items_path %>
+<%= button_to 'new item', new_item_path, method: :get %>
+<%= button_to 'only expensive', expensive_items_path, method: :get %>
+<%= button_to 'index', items_path, method: :get %>
