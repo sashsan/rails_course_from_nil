@@ -28,6 +28,7 @@
   <%= button_to 'new item', new_item_path, method: :get %>
   <%= button_to 'only expensive', expensive_items_path, method: :get %>
   <%= button_to 'index', items_path, method: :get %>
+  <%= button_to 'admin panel', admin_users_count_path, method: :get %>
 <% end %>
 
 <%= render partial: 'shared/email' %>
