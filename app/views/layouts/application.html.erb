@@ -10,7 +10,17 @@
   </head>
 
   <body>
+  <% if notice %>
+    <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
+
     <h2 style="color: #B00100;">User Panel</h2>
+    <p style="color: #B00100"><%= flash[:error] %></p>
+    <p style="color: darkgreen"><%= flash[:success] %></p>
     <%= yield %>
+
   </body>
 </html>
