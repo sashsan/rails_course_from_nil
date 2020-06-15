@@ -5,7 +5,7 @@ class ItemsController < ApplicationController
   after_action  :show_info, only: %i[index]
 
   def index
-    @items = Item.all
+    @items = Item.all.order(:id).limit 10
   end
 
   def create
