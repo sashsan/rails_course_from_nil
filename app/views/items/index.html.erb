@@ -19,7 +19,7 @@
         <th><%= item.id %></th>
         <th><%= link_to item.name, item_path(item) %></th>
         <th><%= item.price %></th>
-        <th style="font-weight: bold; text-align: center"><%= item.description ? "img" : "no img" %></th>
+        <th style="font-weight: bold; text-align: center"><%= item.description %></th>
         <th><%= item.votes_count %>, <%= link_to '+', upvote_item_path(item) %> </th>
         <th><%= !item.image.nil? ? image_tag(item.image.file, width: '30px', height: '30px') : 'no img' %></th>
         <th><%= button_to 'delete', item_path(item), method: :delete %></th>
