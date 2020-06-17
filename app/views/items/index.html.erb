@@ -18,7 +18,7 @@
         </thead>
         <% @items.each do |item| %>
           <tbody>
-          <tr>
+          <tr data-item_id="<%= item.id %>">
             <th scope="col"><%= item.id %></th>
             <th scope="col"><%= link_to item.name.camelize, item_path(item), class: "text-info" %></th>
             <th scope="col"><%= item.price %></th>
@@ -31,7 +31,7 @@
                                                              width: '30px',
                                                              height: '30px') : 'no img' %>
             </th>
-            <th scope="col"><%= button_to 'delete', item_path(item), method: :delete %></th>
+            <th class="deleteAction"><span>delete</span></th>
           </tr>
           </tbody>
         <% end %>
