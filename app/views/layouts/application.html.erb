@@ -1,21 +1,24 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>RailsCourse</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>RailsCourse</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <%= favicon_link_tag asset_path('1.jpg') %>
-  </head>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <%= favicon_link_tag asset_path('1.jpg') %>
+</head>
 
-  <body>
+<body>
 
+<div class="jumbotron vertical-center">
+  <div class="container">
     <h2 style="color: #B00100;">User Panel</h2>
     <p style="color: #B00100"><%= flash[:error] %></p>
     <p style="color: darkgreen"><%= flash[:success] %></p>
     <%= yield %>
-
-  </body>
+  </div>
+</div>
+</body>
 </html>
