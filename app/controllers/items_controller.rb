@@ -5,8 +5,7 @@ class ItemsController < ApplicationController
   after_action  :show_info, only: %i[index]
 
   def index
-    @items = Item.all.order :id
-    @items = @items.includes(:image)
+    @items = Item.all.order(:id).includes :image
   end
 
   def create

@@ -4,6 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.6.3'
 
 gem 'bootsnap', '>= 1.4.2', require: false
+gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.7'
 gem 'pg', '>= 0.18', '< 2.0'
@@ -18,6 +19,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'factory_bot'
   gem 'pry'
+  gem 'rails-controller-testing'
   gem 'rspec-rails'
 end
 
