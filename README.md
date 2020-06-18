@@ -1,24 +1,13 @@
-# README
+### Environments
+* `Ruby version 2.6.3`
+* `Rails version 6.0.3.1`
+* `PostgreSQL`
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Start development
+* `git clone https://github.com/sashsan/rails-course-from-nil.git`
+* `bundler install`
+* `bundler exec rake db:create`
+* `bundler exec rake db:migrate`
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Spec test
+* `bundler exec rspec spec`
